@@ -208,3 +208,15 @@ void desaloca_lista( Lista *p ){
 	p->qtd = 0;
 }
 
+int desalocaSubLista(Lista *p){
+   Elemento *aux = p->cabeca;
+   while (aux != NULL)
+   {
+      Elemento *prox = aux->proximo;
+      desaloca_lista(aux->info);
+      free(aux);
+      aux = prox;
+   }
+   p->cabeca = NULL;
+   p->qtd = 0;
+}

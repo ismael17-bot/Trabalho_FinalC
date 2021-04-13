@@ -28,3 +28,4 @@ int insere_ordem( Lista *p, void *info , int (*compara)(void*, void*) );
 void mostra_lista( Lista l, void (*mostra)(void *) );
 int conta_elementos( Lista l );
 void desaloca_lista( Lista *p );
+int desalocaSubLista(Lista *p);
